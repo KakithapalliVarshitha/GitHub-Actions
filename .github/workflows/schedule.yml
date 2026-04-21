@@ -1,12 +1,16 @@
-name: Simple Scheduled Workflow
+name: Scheduled workflow
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "0 9 * * *"   # Runs every day at 9:00 AM (UTC)
+    - cron: '*/10 * * * *'
 
 jobs:
-  example:
+  demo:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print message
-        run: echo "Hello! This workflow is running on a schedule."
+      - name: Log time
+        run: |
+          current_date_time=$(date)
+          echo "Current date and time: $current_date_time"
