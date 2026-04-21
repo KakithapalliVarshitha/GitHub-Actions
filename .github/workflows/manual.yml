@@ -33,4 +33,3 @@ jobs:
       - name: Gender
         run: echo "${{ inputs.gender }}"
 
-
