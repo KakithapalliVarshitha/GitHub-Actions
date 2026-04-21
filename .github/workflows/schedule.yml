@@ -3,7 +3,7 @@ name: Scheduled workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: "*/10 * * * *"
 
 jobs:
   demo:
@@ -14,3 +14,4 @@ jobs:
         run: |
           current_date_time=$(date)
           echo "Current date and time: $current_date_time"
+
